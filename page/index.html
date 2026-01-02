@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SwiftStack — Fast project scaffolding</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <div class="logo">⚡️</div>
+        <div>
+          <h1>SwiftStack</h1>
+          <p class="tag">High-speed project scaffolder — assemble projects from reusable "slices"</p>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#slices">Slices</a>
+        <a href="#how">How it works</a>
+        <a href="#get-started" class="btn">Get started</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h2>Ship projects in seconds using prebuilt slices</h2>
+          <p>SwiftStack composes new projects by stitching together compressed, verifiable slices: bases and addons. It verifies SHA-256 hashes, caches artifacts locally, and merges package metadata for consistent outputs.</p>
+          <div class="cta-row">
+            <a href="#slices" class="btn large">Browse slices</a>
+            <a href="https://github.com/004Ongoro/swiftstack" target="_blank" rel="noopener" class="btn ghost">SwiftStack repo</a>
+          </div>
+        </div>
+        <div class="hero-panel">
+          <div class="panel-card">
+            <h3>Interactive</h3>
+            <p>Use the TUI wizard or CLI to assemble projects: swiftstack ui, create, build, sync.</p>
+            <small>Example: swiftstack create --name my-app --base next-base --addons tailwind-ui,auth</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="slices" class="slices container">
+      <div class="slices-header">
+        <h2>Slices</h2>
+        <div class="controls">
+          <input id="search" placeholder="Search slices (id, title, description)..." />
+          <select id="filterType">
+            <option value="all">All</option>
+            <option value="bases">Bases</option>
+            <option value="addons">Addons</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="slicesGrid" class="grid"></div>
+
+      <div id="empty" class="empty">Loading slices...</div>
+    </section>
+
+    <section id="how" class="how container">
+      <h2>How SwiftStack works</h2>
+      <ol>
+        <li>Resolve slice aliases from a manifest (bases & addons).</li>
+        <li>Ensure slice artifacts are cached (download if missing) and verify SHA-256 integrity.</li>
+        <li>Extract base, apply addons (merge package.json, move files with backup), finalize with npm lockfile update.</li>
+      </ol>
+      <p class="note">Read full details in the <a href="https://github.com/004Ongoro/swiftstack/blob/main/README.md" target="_blank" rel="noopener">SwiftStack README</a>.</p>
+    </section>
+
+    <section id="get-started" class="container get-started">
+      <h2>Get started</h2>
+      <pre class="terminal"># Install
+go install github.com/004Ongoro/swiftstack/cmd/swiftstack@latest
+
+# Create a project
+swiftstack create --name my-app --base next-base --addons tailwind-ui,auth
+</pre>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>Made with ⚡ by SwiftStack • <a href="https://github.com/004Ongoro/swiftstack-slices" target="_blank">slices registry</a></p>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </main>
+</body>
+</html>

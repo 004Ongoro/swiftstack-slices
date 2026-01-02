@@ -1,0 +1,30 @@
+{
+  "bases": [
+    {
+      "id": "next-base",
+      "title": "Next.js Base",
+      "description": "Opinionated Next.js base project",
+      "url": "https://cdn.example.com/slices/next-base@1.0.0.tar.zst",
+      "version": "1.0.0",
+      "hash": "9f2c7d4b6a5e2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7"
+    }
+  ],
+  "addons": [
+    {
+      "id": "tailwind-ui",
+      "title": "Tailwind UI Setup",
+      "description": "Tailwind + config + sample components",
+      "url": "https://cdn.example.com/slices/tailwind-ui@0.4.2.tar.zst",
+      "version": "0.4.2",
+      "hash": "3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4"
+    },
+    {
+      "id": "auth",
+      "title": "Auth Addon",
+      "description": "Starter auth integration with sample pages and utils",
+      "url": "https://cdn.example.com/slices/auth@0.2.1.tar.zst",
+      "version": "0.2.1",
+      "hash": "7b6a5c4d3e2f1a0b9c8d7e6f5a4b3c2d1e0f9a8b7c6d5e4f3a2b1c0d9e8f7a6"
+    }
+  ]
+}
